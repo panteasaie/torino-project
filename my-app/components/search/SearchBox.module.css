@@ -1,0 +1,7 @@
+.field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 15px;
+  border-left: 1px solid #eee;
+}

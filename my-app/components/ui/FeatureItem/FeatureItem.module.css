@@ -1,0 +1,36 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 180px;
+}
+
+.iconbox {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(145deg, #2ecc71, #27ae60);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.textbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.textbox h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.textbox p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.7;
+}

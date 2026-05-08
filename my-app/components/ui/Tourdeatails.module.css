@@ -1,0 +1,162 @@
+.card {
+  max-width: 900px;
+  margin: 140px auto;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.imageBox {
+  flex: 1;
+}
+
+.image {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.duration {
+  color: #777;
+  margin: 10px 0;
+}
+
+.meta {
+  display: flex;
+  gap: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Yekanbakh";
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #218838;
+}
+
+.price {
+  color: #00aaff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+}
+.footer span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-left: 1px solid #eee;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.container {
+  max-width: 1000px;
+  margin: 120px auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* کارت سمت چپ */
+.summary {
+  width: 35%;
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.duration {
+  color: #777;
+  font-size: 14px;
+}
+
+.priceBox {
+  margin: 20px 0;
+}
+
+.priceBox span {
+  font-size: 13px;
+  color: #888;
+}
+
+.priceBox p {
+  color: #00aaff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.buyBtn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Yekanbakh";
+}
+
+/* فرم سمت راست */
+.formBox {
+  width: 65%;
+  background: #d6d5d5;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+
+.formBox input,
+.formBox select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}

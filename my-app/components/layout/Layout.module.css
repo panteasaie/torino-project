@@ -1,0 +1,120 @@
+/* .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+  box-shadow: 0px 1px 4px 0px #00000029;
+  border-radius: 40px 40px 0 0;
+} */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background: white;
+  border-bottom: 1px solid #eee;
+
+  z-index: 1000;
+  box-shadow: 0px 1px 4px 0px #00000029;
+
+  border-radius: 0; /* ❌ حذف */
+  height: 70px;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  font-family: "YekanBakh";
+}
+
+.nav a {
+  text-decoration: none;
+
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #282828;
+}
+.nav a:active {
+  color: #28a745;
+}
+.span p{
+  color: #28a745;
+}
+.loggout{
+  color: #D40000;
+}
+.loginBtn {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #28a745;
+  padding: 8px;
+  border-radius: 8px;
+  width: 166px;
+  height: 44px;
+  cursor: pointer;
+  border: 2px solid #28a745;
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 43px;
+}
+.profile {
+  width: 20;
+  height: 20;
+  margin-left: 2px;
+  margin-top: 4px;
+}
+
+.userBox {
+  color: #28a745;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: rgb(244, 240, 240);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  width: 180px;
+}
+.dropdown p{
+  font-family: "YekanBakh";
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color:#282828
+}
+.dropdown span {
+  font-family: "YekanBakh";
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+color: #D40000;
+line-height: 100%;
+letter-spacing: 0%;
+
+}

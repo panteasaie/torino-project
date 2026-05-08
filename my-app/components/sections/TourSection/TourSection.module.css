@@ -1,0 +1,15 @@
+.container {
+  padding: 60px;
+  
+  direction: rtl;
+  font-family: sans-serif;
+  
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+

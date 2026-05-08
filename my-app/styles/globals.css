@@ -1,0 +1,36 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
+  height: 100%;
+  
+
+}
+
+
+* {
+ box-sizing: border-box;
+  direction: rtl;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+ input:not(.otpInput) {
+  width: 100%;
+}
+ @font-face {
+  font-family: 'YekanBakh';
+  src: url('/fonts/YekanBakhNoEn-Regular.woff') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

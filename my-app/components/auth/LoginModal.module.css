@@ -1,0 +1,59 @@
+.backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(8px);
+
+}
+
+.modal{
+  width: 561;
+height: 362;
+border-radius: 20px;
+
+/* backdrop-filter: blur(4px); */
+  background: #f6f1e6;
+  border-radius: 16px;
+  padding: 28px 48px 30px;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  direction: rtl;
+}
+
+.close{
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
+
+
+.submit{
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #1f8a4c;
+  color: white;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 12px 0;
+  
+}
+.error{
+  color: #e53935;
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: right;
+}

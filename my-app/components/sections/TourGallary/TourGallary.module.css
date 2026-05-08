@@ -1,0 +1,90 @@
+.sectionWrapper {
+  width: 100%;
+  padding-left: 40px;
+  
+}
+
+.content {
+  width: 1582px;
+  margin-left: auto;      /* بچسبه سمت راست */
+  display: flex;
+  flex-direction: row-reverse;  /* چون RTL هستیم */
+  align-items: center;
+  gap: 7px;              /* فاصله بین متن و اسلایدر */
+}
+
+.right {
+  flex: 1;
+  text-align: right;
+}
+
+.left {
+  flex: 1;
+  padding-right: 40px;
+  justify-content: flex-end;
+  display: flex;
+}
+.sectionWrapper {
+  width: 100%;
+  padding: 120px 0;
+}
+
+.content {
+  width: 1182px;
+  margin-left: auto;      /* بچسبه سمت راست */
+  display: flex;
+  flex-direction: row-reverse;  /* چون RTL هستیم */
+  align-items: center;
+  gap: 80px;              /* فاصله بین متن و اسلایدر */
+}
+
+.right {
+  flex: 1;
+  text-align: right;
+}
+
+.left {
+  flex: 1;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1f7a4f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.title {
+  margin-left: auto;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.brand {
+  color: #1f7a4f;
+}
+
+.subTitle {
+  margin: 10px 0 14px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 2;
+  color: #555;
+}

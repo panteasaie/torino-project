@@ -1,0 +1,121 @@
+.footer {
+  width: 100%;
+  background: #f6f4ef;      /* مثل بک‌گراند روشن */
+  border-top: 1px solid #e5e7eb;
+  padding: 32px 0;
+  
+}
+
+/* کل محتوا */
+.container {
+  width: min(1182px, 92%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  direction: ltr;
+}
+
+/* ستون برند (لوگو + تلفن + نمادها) */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* همه چیز وسط */
+  text-align: center;
+}
+
+/* لوگو + تلفن */
+.brandTop {
+  display: flex;
+  flex-direction: column;  /* مهم: زیر هم */
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  display: block;
+}
+
+/* تلفن پشتیبانی */
+.support {
+  display: flex;
+  flex-direction: column;  /* مهم: label و شماره زیر هم */
+  align-items: center;
+  gap: 4px;
+}
+
+.supportLabel {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.supportNumber {
+  font-size: 14px;
+  font-weight: 800;
+  color: #111827;
+  direction: ltr;          /* شماره قشنگ‌تر */
+}
+
+/* نمادها */
+.badges {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ستون‌های لینک */
+.col {
+  text-align: right;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 5px;
+}
+
+.list a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.list a:hover {
+  color: #111827;
+}
+.copy{
+     width: min(1182px, 92%);
+  margin: 18px auto 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 12.5px;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+
+}
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .col {
+    text-align: center;
+  }
+}

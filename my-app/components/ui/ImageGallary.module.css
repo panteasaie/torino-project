@@ -1,0 +1,47 @@
+.sliderWrap {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  margin-left: 330px;
+  
+}
+
+/* فاصله پایین برای اینکه جا داشته باشن */
+.sliderWrap :global(.swiper) {
+  padding-bottom: 70px;
+  overflow: visible !important;
+}
+
+/* ====== PAGINATION (1/4) ====== */
+.sliderWrap :global(.swiper-pagination) {
+  direction: ltr;
+  bottom: 10px !important;
+  left: 40% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  text-align: center;
+  font-size: 14px;
+  color: #9aa0a6;
+}
+
+/* ====== NAVIGATION BUTTONS ====== */
+.sliderWrap :global(.swiper-button-next),
+.sliderWrap :global(.swiper-button-prev) {
+  top: auto !important;
+  bottom: 8px !important;
+  transform: none !important;
+  width: 28px !important;
+  height: 28px !important;
+  color: #9aa0a6;
+}
+
+/* نزدیک‌تر شدن فلش‌ها به هم */
+.sliderWrap :global(.swiper-button-prev) {
+  right: 50% !important;
+}
+.sliderWrap :global(.swiper-button-next) {
+  right: 65% !important;
+}
+.sliderWrap :global(.swiper-slide){
+    width: 110px !important;
+}
