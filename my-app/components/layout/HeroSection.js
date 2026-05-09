@@ -12,17 +12,37 @@ export default function HeroSection({ onSelect, tours }) {
   const [origin, setOrigin] = useState("");
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("");
-  const origins = [
-    ...new Set((tours || []).map((item) => item.origin?.namefa)),
-  ];
+  const cityMap = {
+  Tehran: "تهران",
+  Sanandaj: "سنندج",
+  Madrid: "مادرید",
+  Isfahan: "اصفهان",
+  Mazandaran: "مازندران",
+  Italy: "ایتالیا",
+  Hewler:"هولر",
+  Sulaymaniyah:"سلیمانیه",
+  Offroad:"آفرود"
+};
+ const origins = [
+  ...new Set(
+    (tours || [])
+.map((item) => cityMap[item.origin?.name] || item.origin?.name)
+      .filter(Boolean)
+  ),
+];
+
   const [openOrigin, setOpenOrigin] = useState(false);
   const [searchOrigin, setSearchOrigin] = useState("");
   const [openDestination, setOpenDestination] = useState(false);
   const [searchDestination, setSearchDestination] = useState("");
 
-  const destinations = [
-    ...new Set((tours || []).map((item) => item.destination?.namefa)),
-  ];
+ const destinations = [
+  ...new Set(
+    (tours || [])
+     .map((item) => cityMap[item.destination?.name] || item.destination?.name)
+      .filter(Boolean)
+  ),
+];
   const searchHandler = () => {
     router.push({
       pathname: "/tours",
@@ -59,7 +79,7 @@ export default function HeroSection({ onSelect, tours }) {
             {openOrigin && (
               <div className={styles.menu}>
                 {origins
-                  .filter((o) => o.includes(searchOrigin))
+                  .filter((o) => o?.includes(searchOrigin))
                   .map((o, i) => (
                     <div
                       key={i}
@@ -93,7 +113,9 @@ export default function HeroSection({ onSelect, tours }) {
             {openDestination && (
               <div className={styles.menu}>
                 {destinations
-                  .filter((d) => d.includes(searchDestination))
+                .filter((d) =>
+  d?.toLowerCase().includes(searchDestination.toLowerCase())
+)
                   .map((d, i) => (
                     <div
                       key={i}

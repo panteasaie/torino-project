@@ -6,10 +6,12 @@ import LoginModal from "../auth/LoginModal";
 import { FiChevronDown } from "react-icons/fi";
 import { useRouter } from "next/router";
 import Footer from "./Footer/Footer";
+
 function Layout({ children,showLogo = true }) {
   const [isOpen, setIsOpen] = useState(false);
   const [userPhone, setUserPhone] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
   const router=useRouter()
   useEffect(() => {
     const phone = localStorage.getItem("mobile");
@@ -23,6 +25,9 @@ function Layout({ children,showLogo = true }) {
   return (
     <>
     <header className={styles.header}>
+  <div className={styles.hamburger} onClick={() => setMobileMenu(true)}>
+  ☰
+</div>
       <div className={styles.container}>
         <div className={styles.logo}>
           {showLogo && <img src="/images/torino.png" />}
@@ -34,7 +39,14 @@ function Layout({ children,showLogo = true }) {
           <Link href="/about">درباره ما</Link>
           <Link href="/contact">تماس با ما</Link>
         </nav>
-
+{mobileMenu && (
+  <div className={styles.mobileMenu}>
+    <Link href="/" onClick={() => setMobileMenu(false)}>صفحه اصلی</Link>
+    <Link href="/services" onClick={() => setMobileMenu(false)}>خدمات گردشگری</Link>
+    <Link href="/about" onClick={() => setMobileMenu(false)}>درباره ما</Link>
+    <Link href="/contact" onClick={() => setMobileMenu(false)}>تماس با ما</Link>
+  </div>
+)}
         {userPhone ? (
           <div className={styles.userBox}>
             <div onClick={() => setOpenMenu(!openMenu)}>
@@ -84,6 +96,31 @@ function Layout({ children,showLogo = true }) {
           />
         )}
       </div>
+      {mobileMenu && (
+  <div className={styles.overlay} onClick={() => setMobileMenu(false)}>
+    
+    <div className={styles.sideMenu} onClick={(e) => e.stopPropagation()}>
+      
+      <Link href="/" onClick={() => setMobileMenu(false)}>
+        صفحه اصلی
+      </Link>
+
+      <Link href="/services" onClick={() => setMobileMenu(false)}>
+        خدمات گردشگری
+      </Link>
+
+      <Link href="/about" onClick={() => setMobileMenu(false)}>
+        درباره ما
+      </Link>
+
+      <Link href="/contact" onClick={() => setMobileMenu(false)}>
+        تماس با ما
+      </Link>
+
+    </div>
+
+  </div>
+)}
     </header>
     <main>{children}</main>
     <Footer/>

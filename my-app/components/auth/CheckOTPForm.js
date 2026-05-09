@@ -3,13 +3,9 @@ import { useCheckOtp } from "../../core/services/mutations";
 import styles from "./CheckOTPForm.module.css";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";
-// import dynamic from "next/dynamic";
-// import OtpInput from "react-otp-input";
+
 import OtpInput from "react18-otp-input";
 import { setCookie } from "../../core/utils/cookie";
-// const OtpInput = dynamic(() => import("react-otp-input"), {
-//   ssr: false,
-// });
 
 function CheckOTPForm({ mobile, setStep, setIsOpen, setUserPhone }) {
   const [code, setCode] = useState("");
@@ -52,14 +48,7 @@ function CheckOTPForm({ mobile, setStep, setIsOpen, setUserPhone }) {
       <h2 className={styles.title}>کد تایید را وارد کنید</h2>
       <p className={styles.subtitle}>کد ارسال شده را وارد کنید</p>
 
-      {/* <OtpInput
-        value={code}
-        onChange={setCode}
-        numInputs={6}
-        renderInput={(props) => (
-          <input {...props} className={styles.otpInput} />
-        )}
-      /> */}
+   
       <OtpInput
         value={code}
         onChange={setCode}

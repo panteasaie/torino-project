@@ -107,7 +107,12 @@ export default function Profile() {
   const { mutate, isPending } = useUpdateUserData();
 
   const [editPersonal, setEditPersonal] = useState(false);
+  const [editBank, setEditBank] = useState(false);
 
+  const [bankData, setBankData] = useState({
+    cardNumber: "",
+    sheba: "",
+  });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -125,6 +130,10 @@ export default function Profile() {
         gender: data.gender || "",
         birthDate: data.birthDate || "",
         nationalCode: data.nationalCode || "",
+      });
+      setBankData({
+        cardNumber: data.cardNumber || "",
+        sheba: data.sheba || "",
       });
     }
   }, [data]);
@@ -176,7 +185,6 @@ export default function Profile() {
             </div>
           </div>
 
-          {/* اطلاعات شخصی */}
           <div className={styles.card}>
             <div className={styles.cardheader}>
               <span>اطلاعات شخصی</span>
@@ -249,14 +257,62 @@ export default function Profile() {
           <div className={styles.card}>
             <div className={styles.cardheader}>
               <span>اطلاعات حساب بانکی</span>
-              <button>ویرایش اطلاعات</button>
+              {/* <button>ویرایش اطلاعات</button> */}
+              <button onClick={() => setEditBank(!editBank)}>
+                {editBank ? "انصراف" : "ویرایش اطلاعات"}
+              </button>
             </div>
             <div className={styles.cardbody}>
               <div className={styles.row}>
-                <p>شماره کارت</p> <span>-</span>{" "}
+                <div className={styles.row}>
+                  <p>شماره کارت</p>
+
+                  {!editBank ? (
+                    <span>{data.cardNumber || "-"}</span>
+                  ) : (
+                    <input
+                      value={bankData.cardNumber}
+                      onChange={(e) =>
+                        setBankData({
+                          ...bankData,
+                          cardNumber: e.target.value,
+                        })
+                      }
+                    />
+                  )}
+                </div>
               </div>
               <div className={styles.row}>
                 <p>شماره شبا</p> <span>-</span>{" "}
+                {!editBank ? (
+                  <span>{data.sheba || "-"}</span>
+                ) : (
+                  <input
+                    value={bankData.sheba}
+                    onChange={(e) =>
+                      setBankData({
+                        ...bankData,
+                        sheba: e.target.value,
+                      })
+                    }
+                  />
+                )}
+                {editBank && (
+                  <div className={styles.actions}>
+                    <button
+                      className={styles.confirm}
+                      onClick={() => {
+                        mutate(bankData, {
+                          onSuccess: () => {
+                            setEditBank(false);
+                          },
+                        });
+                      }}
+                    >
+                      {isPending ? "در حال ثبت..." : "تایید"}
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
