@@ -1,0 +1,144 @@
+.myTours {
+  width: 100%;
+  direction: rtl;
+  padding: 20px;
+}
+.tourCard {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  overflow: hidden;
+
+  padding: 24px;
+}
+.tourStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-right: auto;
+}
+
+.completed {
+  background: #dff7e4;
+  color: #28a745;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #d39e00;
+}
+
+.tourHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+.tourType {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+}
+
+.tourIcon {
+  font-size: 30px;
+}
+
+.tourTitle {
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+}
+
+.tourRoute {
+  padding: 0 32px 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #444;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tourDate {
+  color: #666;
+  font-size: 18px;
+}
+
+.tourFooter {
+  border-top: 1px solid #ededed;
+
+  padding: 22px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tourPrice {
+  color: #888;
+  font-size: 18px;
+}
+
+.tourPrice span {
+  margin-right: 8px;
+  color: #222;
+  font-weight: bold;
+}
+
+.tourNumber {
+  font-size: 18px;
+  color: #555;
+  font-weight: 600;
+}
+
+.stateMessage {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  .tourHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .tourRoute {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tourFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tourTitle {
+    font-size: 24px;
+  }
+
+  .tourType {
+    font-size: 20px;
+  }
+}
